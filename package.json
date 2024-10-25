@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/app.js"
+    "dev": "nodemon ./src/app.js --ignore src/documents/** --ignore src/documents"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +16,9 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
-    "mysql2": "^3.11.3"
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.11.3",
+    "xlsx-populate": "^1.21.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"

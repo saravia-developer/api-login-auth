@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import authRouter from './routes/auth-router.js';
 import { authMiddleware } from './middleware/auth-middleware.js';
+import fileRouter from './routes/files-router.js';
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(authMiddleware.timestamp);
 app.use('/auth', authRouter);
+app.use('/file', fileRouter)
 
 app.use('**', (req, res) => {
   res
